@@ -12,7 +12,8 @@
     "peerDependencies": {
         "prop-types": "^15.6.0",
         "react": "^16.0.0",
-        "react-dom": "^16.0.0"
+        "react-dom": "^16.0.0",
+        "antd": "^3.25.0"
     },
     "devDependencies": {
         "babel-core": "^6.21.0",
@@ -36,8 +37,5 @@
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.9.0"
-    },
-    "dependencies": {
-        "antd": "^3.24.3"
     }
 }

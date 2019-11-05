@@ -7,11 +7,20 @@ import './styles.less';
 export function Button(props: any) {
 
   let pseudoProps = {...props};
-  if (props.type == 'outline') {
-      pseudoProps.className += ' d4sdbutton-outline';
+  if (props.type == 'primary-outline') {
+    pseudoProps.className += ' d4sdbutton d4sdbutton-primary d4sdbutton-outline';
+  }
+  else if (props.type == 'secondary-outline') {
+    pseudoProps.className += ' d4sdbutton d4sdbutton-secondary d4sdbutton-outline';
+  }
+  else if (props.type == 'primary') {
+    pseudoProps.className += ' d4sdbutton d4sdbutton-primary';
+  }
+  else if (props.type == 'secondary') {
+    pseudoProps.className += ' d4sdbutton d4sdbutton-secondary';
   }
   else {
-    pseudoProps.className += ' d4sdbutton';
+    pseudoProps.className += ' d4sdbutton d4sdbutton-primary';
   }
   return (
     <div className = "d4sdbutton-wrapper">
