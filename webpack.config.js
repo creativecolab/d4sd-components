@@ -1,4 +1,5 @@
 var path = require('path');
+const nodeExternals = require('webpack-node-externals');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
     mode: 'production',
@@ -12,18 +13,19 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /(node_modules)/,
+                exclude: /node_modules/,
                 include:path.resolve('src'),
                 use: 'babel-loader'
             },
             {
                 test: /\.(ts|tsx)$/,
-                exclude: /(node_modules)/,
+                exclude: /node_modules/,
                 include:path.resolve('components'),
                 use: 'ts-loader'
             },
             {
                  test: /\.(less|css)$/,
+                 exclude: /node_modules/,
                  use: ['style-loader', 'css-loader', 'less-loader']
             }
         ]
@@ -34,5 +36,6 @@ module.exports = {
     },
     plugins: [
       new BundleAnalyzerPlugin()
-    ]
+    ],
+    externals: [nodeExternals()],
 }

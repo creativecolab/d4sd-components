@@ -33,12 +33,15 @@
         "style-loader": "^1.0.0",
         "ts-loader": "^6.2.1",
         "typescript": "^3.6.4",
+        "uglifyjs-webpack-plugin": "^2.2.0",
         "webpack": "^4.41.2",
         "webpack-bundle-analyzer": "^3.6.0",
         "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.9.0"
     },
     "dependencies": {
-        "antd": "^3.25.0"
+        "@types/react": "^16.9.11",
+        "antd": "^3.25.0",
+        "webpack-node-externals": "^1.7.2"
     }
 }
