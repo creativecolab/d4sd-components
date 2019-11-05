@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {default as AntdButton} from 'antd/es/button';
+import {Button as AntdButton} from 'antd';
 
 import './styles.less';
 
