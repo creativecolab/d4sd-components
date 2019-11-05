@@ -1,5 +1,5 @@
 var path = require('path');
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
     mode: 'production',
     entry: './index.tsx',
@@ -31,5 +31,8 @@ module.exports = {
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", '.js', '.jsx', '.css', '.less']
-    }
+    },
+    plugins: [
+      new BundleAnalyzerPlugin()
+    ]
 }

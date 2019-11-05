@@ -22,6 +22,18 @@ export function Button(props: any) {
   else {
     pseudoProps.className += ' d4sdbutton d4sdbutton-primary';
   }
+  if (props.size == 'medium') {
+    pseudoProps.className += ' d4sdbutton-medium'
+  }
+  else if (props.size == 'large') {
+    pseudoProps.className += ' d4sdbutton-large'
+  }
+  else if (props.size == 'small') {
+    pseudoProps.className += ' d4sdbutton-small'
+  }
+  else {
+    pseudoProps.className += ' d4sdbutton-medium'
+  }
   return (
     <div className = "d4sdbutton-wrapper">
       <AntdButton {...pseudoProps}>{props.children}</AntdButton>
