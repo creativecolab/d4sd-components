@@ -9,21 +9,31 @@ time, mark, audio, video {
   font-family: @font;
 }
 
+html{
+  font-size: 7px;
+  @media screen and (min-width: @sm){
+    font-size: 8px;
+  }
+  @media screen and (min-width: @md){
+    font-size: 9px;
+  }
+}
+
 h1 {
   color: @h1-color;
-  font-size: 60pt;
+  font-size: 6.6rem;
   line-height: 125%;
   font-weight: bold;
 }
 h2 {
   color: @h2-color;
-  font-size: 28pt;
+  font-size: 2.4rem;
   line-height: 125%;
   font-weight: bold;
 }
 h3 {
   color: @h3-color;
-  font-size: 24pt;
+  font-size: 2.2rem;
   line-height: 125%;
   font-weight: bold;
 }
@@ -33,8 +43,8 @@ h4 {
 h5 {
 
 }
-p, li {
+li {
   font-family: @body-font;
-  font-size:20pt;
+  font-size: 2rem;
   color: @b2;
 }
