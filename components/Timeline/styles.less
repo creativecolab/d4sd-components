@@ -1,0 +1,54 @@
+@import "../../styles/index.less";
+
+.d4sdtimeline-wrapper {
+    .d4sdtimeline {
+        .ant-timeline-item-head:not(.ant-timeline-item-head-custom) {
+            width: 40px;
+            height: 40px;
+            border-width: 9px;
+            border-color: @d4sd-color;
+            left: 0;
+        }
+
+        .d4sdtimeline-item-wrapper {
+          position: relative;
+        }
+        .d4sdtimeline-item-pretext {
+          position: absolute;
+          transform: translate(-100%, 0%);
+          left:  -@margin-base-1 / 2; // TODO DEISGN TEAM
+        }
+        .ant-timeline-item-head-custom {
+            left: 20px;
+            transform: translate(-50%, 0);
+        }
+
+        .ant-timeline-item-head.green {
+            border-color: @d4sd-color;
+        }
+
+        .ant-timeline-item-content {
+            left: 20px;
+            margin-left: 120px;
+            padding-bottom: 40px;
+            //transform: translate(0, -50%);
+        }
+
+        .ant-timeline-item-head::before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: calc(50% - 3px);
+            background-color: @d4sd-color;
+            width: 100px;
+            height: 6px;
+            z-index: -1;
+        }
+
+        .ant-timeline-item-tail {
+            border-left: 20px solid #E4F2FF; // TODO DESIGN TEAM?
+            left: 10px;
+            height: calc(100% + 0px);
+        }
+    }
+}
