@@ -1,10 +1,10 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
-import { Button } from "../";
+import { Button } from "../components/Button";
 
 storiesOf("Button", module).add("All", () => (
   <div className="storycontainer">
-    <div className="story-module">
+    <div className="story-module spaced">
       <h3>Small Buttons (fixed)</h3>
       <Button type="primary-outline" size="small">
         PREVIOUS
@@ -25,7 +25,7 @@ storiesOf("Button", module).add("All", () => (
         VERY STRETCHED OUT BUTTON
       </Button>
     </div>
-    <div className="story-module">
+    <div className="story-module spaced">
       <h3>Medium Buttons (sizable)</h3>
       <Button type="primary-outline">PREVIOUS</Button>
       <Button type="primary">NEXT</Button>
@@ -34,7 +34,7 @@ storiesOf("Button", module).add("All", () => (
       <Button type="secondary">NEXT</Button>
       <Button type="secondary">VERY STRETCHED OUT BUTTON</Button>
     </div>
-    <div className="story-module">
+    <div className="story-module spaced">
       <h3>Large Buttons (fixed)</h3>
       <Button type="primary-outline" size="large">
         PREVIOUS
