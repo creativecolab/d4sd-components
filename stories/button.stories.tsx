@@ -6,6 +6,8 @@ storiesOf("Button", module).add("All", () => (
   <div className="storycontainer">
     <div className="story-module spaced">
       <h3>Small Buttons (fixed)</h3>
+      <Button.Google>GOOGLE</Button.Google>
+      <Button.Facebook>GOOGLE</Button.Facebook>
       <Button type="primary-outline" size="small">
         PREVIOUS
       </Button>
