@@ -1,7 +1,8 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 
-import { Timeline, Card, message } from "../";
+import {Card, message } from "../";
+import {Timeline} from "../components/Timeline";
 
 storiesOf("Timeline", module).add("Examples", () => (
   <div className="storycontainer">
@@ -55,6 +56,30 @@ storiesOf("Timeline", module).add("Examples", () => (
           </MessageTimeline>
         </Timeline>
         </div>
+        <div className="story-module" style={{marginLeft:0, marginTop:100}}>
+        <h3>extended bars to fill space</h3>
+        <br/>
+          <Timeline type="card" extended>
+            <Timeline.Item>
+              <Card>
+              <h2>Prelim Submissions</h2>
+              </Card>
+              <Card>
+              <h2>More things in one item</h2>
+              </Card>
+            </Timeline.Item>
+            <MessageTimeline>
+                <Card>
+                <h2>Hover over me!</h2>
+                </Card>
+            </MessageTimeline>
+            <MessageTimeline>
+                <Card>
+                <h2>Hover over me as well!</h2>
+                </Card>
+            </MessageTimeline>
+          </Timeline>
+          </div>
     </div>
   </div>
 ));

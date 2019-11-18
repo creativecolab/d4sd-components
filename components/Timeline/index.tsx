@@ -7,7 +7,7 @@ import './styles.less';
 export function Timeline(props: any) {
 
   let pseudoProps = {...props};
-  if (props.type == 'card') {
+  if (props.type === 'card') {
       pseudoProps.className += " d4sdtimeline";
   }
   return (
