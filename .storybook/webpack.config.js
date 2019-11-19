@@ -1,8 +1,10 @@
+var path = require("path");
 module.exports = {
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
+        include: path.resolve("../"),
         use: [
           {
             loader: require.resolve("awesome-typescript-loader"),
@@ -18,6 +20,7 @@ module.exports = {
       },
       {
         test: /\.(less|css)$/,
+        include: path.resolve("../"),
         use: ["style-loader", "css-loader", "less-loader"]
       }
     ]
