@@ -28,7 +28,13 @@ module.exports = {
         test: /\.(less|css)$/,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader", "less-loader"]
-      }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ]
   },
   resolve: {

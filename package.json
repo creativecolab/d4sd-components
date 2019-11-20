@@ -4,7 +4,7 @@
   "description": "D4SD Component Library, extended from Ant-Design",
   "main": "/lib/index.js",
   "scripts": {
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -s ./stories/assets -p 9001",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --display-error-details"
   },

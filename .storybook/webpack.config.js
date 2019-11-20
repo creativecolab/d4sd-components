@@ -22,7 +22,13 @@ module.exports = {
         test: /\.(less|css)$/,
         include: path.resolve("../"),
         use: ["style-loader", "css-loader", "less-loader"]
-      }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ]
   },
   resolve: {
