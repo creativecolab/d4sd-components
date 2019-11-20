@@ -16,3 +16,4 @@ export function Input(props: any) {
 }
 
 Input.Password = AntdInput.Password;
+Input.Group = AntdInput.Group;
