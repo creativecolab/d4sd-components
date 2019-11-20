@@ -14,3 +14,5 @@ export function Input(props: any) {
     </div>
   )
 }
+
+Input.Password = AntdInput.Password;
