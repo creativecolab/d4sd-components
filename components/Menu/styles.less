@@ -3,6 +3,7 @@
 .d4sdmenu-wrapper .d4sdmenu {
   background-color: @d4sd-color;
   position: fixed;
+  z-index: 9999999999;
   top:0px;
   border-bottom: none;
   box-shadow: @navbar-boxshadow;
@@ -88,7 +89,8 @@
     color: @d4sd-color;
   }
 }
-.d4sdmenu.scroll {
+.d4sdmenu-wrapper
+.d4sdmenu-white {
   background-color: @white;
   color: @b1;
   .menu-item-no,

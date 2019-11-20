@@ -4,7 +4,7 @@ import { Menu } from "../";
 import { Header } from "../";
 storiesOf("Menu", module).add("Examples", () => (
   <div>
-      <Menu id="menubar" mode="horizontal" className={scroll}>
+      <Menu id="menubar" mode="horizontal" className={scroll} >
         <Menu.Item className="menu-item-no menu-logo">
           <img src="/logo.svg" alt="logo" />
         </Menu.Item>
@@ -27,10 +27,11 @@ storiesOf("Menu", module).add("Examples", () => (
         </Menu.Item>
       </Menu>
         <div style={{marginTop:'75px'}}>
-        <Header title="Welcome!" />
+        <Header title="Team Turtles!" teamPictures={["defaultProfile.png", "defaultProfile.png"]} handleTeamClick={undefined}/>
         <p>Example use of menubar and header for workspace etc.</p>
-        <Header title="Welcome!" back="Go back to workspace" />
+        <Header title="Welcome!" back="Go back to workspace" handleBackClick={undefined}/>
         <p>Example use of menubar and header for workspace etc. with back button</p>
+        <p>Adding type="white" to the menu changes it to white variant</p>
         <div style={{height:'1000px'}}></div>
         </div>
       </div>

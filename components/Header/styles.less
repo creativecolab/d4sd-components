@@ -1,6 +1,7 @@
 @import "../../styles/vars.less";
 .d4sdworkspace-header {
   display: inline-block;
+  position: relative;
   height: 240px;
   background-color: @header-bg; // TODO: DESIGN TEAM?
   width: 100vw;
@@ -10,5 +11,42 @@
   padding-top: 120px;
   .header-title {
     font-size: 70px;
+    position: absolute;
+    bottom: 70px;
+    margin-bottom: 0px;
+    line-height: 0.6;
+  }
+  .go-back-bar {
+    position: absolute;
+    top:24px;
+    left: 24px;
+    cursor: pointer;
+  }
+  .go-back {
+    font-size: 26px;
+    font-weight: bold;
+    color: @h4-color;
+    vertical-align: middle;
+    margin-left: 12px;
+  }
+  .team-info {
+    position: absolute;
+    bottom: 24px;
+    .team-member-pic {
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      margin-right: 12px;
+    }
+    .team-member-pic:last-of-type {
+      margin-right: 32px;
+    }
+    .see-team {
+      font-size: 26px;
+      font-weight: bold;
+      color: @h4-color;
+      vertical-align: middle;
+      cursor: pointer;
+    }
   }
 }

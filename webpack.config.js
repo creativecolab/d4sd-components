@@ -30,11 +30,17 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"]
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|svg)$/,
+        include: path.resolve("./components"),
         use: {
           loader: 'url-loader',
         },
       },
+      {
+        test: /\.(svg)$/,
+        include: path.resolve("./components"),
+        loader: 'svg-loader'
+      }
     ]
   },
   resolve: {
