@@ -4,25 +4,25 @@ import { Menu } from "../components/Menu";
 import { Header } from "../components/Header";
 storiesOf("Menu", module).add("Examples", () => (
   <div>
-      <Menu id="menubar" mode="horizontal" className={scroll} >
-        <Menu.Item className="menu-item-no menu-logo">
+      <Menu id="menubar" mode="horizontal" className={scroll}>
+        <Menu.Item type="logo">
           <img src="/logo.svg" alt="logo" />
         </Menu.Item>
         <div className="emptybar menu-item-no" />
-        <Menu.Item className="menu-item">
+        <Menu.Item>
           <span>Home</span>
         </Menu.Item>
-        <Menu.Item className="menu-item">
+        <Menu.Item>
           <span>About</span>
         </Menu.Item>
 
-        <Menu.Item className="menu-item">
+        <Menu.Item>
           <span>Resources</span>
         </Menu.Item>
-        <Menu.Item className="menu-item">
+        <Menu.Item>
           <span>Workspace</span>
         </Menu.Item>
-        <Menu.Item className="menu-profile menu-item-no">
+        <Menu.Item type="profile">
           <img src="defaultProfile.png" alt="avatar" />
         </Menu.Item>
       </Menu>
