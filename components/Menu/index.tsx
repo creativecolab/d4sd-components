@@ -20,12 +20,15 @@ export function Menu(props: any) {
 
 Menu.Item = (props: any) => {
   let pseudoProps = {...props};
-  pseudoProps.className += " menu-item";
+
   if (props.type === "logo") {
-    pseudoProps.className += "menu-item-no menu-logo"
+    pseudoProps.className += " menu-item-no menu-logo"
   }
   else if (props.type === "profile") {
-      pseudoProps.className += "menu-item-no menu-profile"
+      pseudoProps.className += " menu-item-no menu-profile"
+  }
+  else {
+    pseudoProps.className += " menu-item";
   }
   return (
     <AntdMenu.Item {...pseudoProps}>{props.children}</AntdMenu.Item>
