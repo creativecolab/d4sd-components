@@ -37,9 +37,9 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg)$/,
+        test: /\.svg$/,
         include: path.resolve("./components"),
-        loader: 'svg-loader'
+        loader: 'svg-inline-loader'
       }
     ]
   },
