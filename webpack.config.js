@@ -39,7 +39,7 @@ module.exports = {
       {
         test: /\.svg$/,
         include: path.resolve("./components"),
-        loader: 'raw-loader'
+        loader: 'url-loader'
       }
     ]
   },
