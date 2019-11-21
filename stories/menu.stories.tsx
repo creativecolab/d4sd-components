@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
-import { Menu } from "../";
-import { Header } from "../";
+import { Menu } from "../components/Menu";
+import { Header } from "../components/Header";
 storiesOf("Menu", module).add("Examples", () => (
   <div>
       <Menu id="menubar" mode="horizontal" className={scroll} >
