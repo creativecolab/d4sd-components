@@ -1,0 +1,59 @@
+@import "../../styles/vars.less";
+.d4sdstep-wrapper {
+  // NOTE, uses a fairly hacky method to get figma specfication, may want to custom make this step line ourselves
+  font-family: 'Open Sans', sans-serif;
+
+  .d4sdstep-small {
+    height: 48px;
+    .ant-steps-item-active .ant-steps-item-title {
+
+      font-weight: bold;
+    }
+    .ant-steps-item-icon {
+      position: absolute;
+      top:24px;
+      left: calc(-12px); // extra -6px for the padding on the titles*/
+    }
+    .ant-steps-item-content {
+      position: relative;
+    }
+    .ant-steps-item-title {
+      position: relative;
+      left:-50%;
+      font-size: 16px;
+      padding-right: 0px;
+    }
+    .ant-steps-item-container {
+      padding-left: 100px;
+      margin-left: -100px;
+    }
+    .ant-steps-item-container::after {
+      content: '';
+      width: calc(100% - 36px);
+      top: 33px;
+      height: 6px;
+      background-color:#CDCDCD;
+      left: 24px;
+      position: absolute;
+    }
+    .ant-steps-item:last-child {
+      .ant-steps-item-container::after {
+        display: none;
+      }
+      .ant-steps-item-container {
+        width:0px;
+      }
+    }
+
+    .ant-steps-item {
+      overflow:visible;
+      /*
+      margin-left: -100px;
+      padding-left: 100px;
+      margin-right: 56px;*/
+    }
+    .ant-steps-item-title::after {
+      display: none;
+    }
+  }
+}

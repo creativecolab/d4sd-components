@@ -1,51 +1,74 @@
-@import '../../styles/index.less';
-.d4sdbutton-wrapper{
-  .d4sdbutton, .d4sdbutton-outline {
+@import "../../styles/vars.less";
+.d4sdbutton-wrapper {
+  display: inline-block;
+
+
+  width:100%;
+  .d4sdbutton,
+  .d4sdbutton-outline {
+    margin-bottom: 8px;
+    margin-right: 12px;
     border-color: @d4sd-color;
-    color:@white;
+    color: @white;
     border-width: 2px;
     border-radius: 10px;
-    height:50px;
+    height: 50px;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: bold;
   }
   .d4sdbutton:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: @d4sd-color;
+    border-color: @d4sd-color;
+    color: @white;
   }
   .d4sdbutton:active {
     box-shadow: none;
+    border-color: @d4sd-color;
+    color: @white;
   }
   .d4sdbutton-primary {
     background-color: @d4sd-color;
-    color:@white;
+    color: @white;
   }
   .d4sdbutton-secondary {
     background-color: @d4sd-secondary-color;
     border-color: @d4sd-secondary-color;
-    color:@white;
+    color: @white;
+  }
+  .d4sdbutton-secondary:hover {
+    background-color: @d4sd-secondary-color;
+    color: @white;
+    border-color: @d4sd-secondary-color;
   }
   .d4sdbutton-primary.d4sdbutton-outline {
     color: @d4sd-color;
-    border-color:@d4sd-color;
+    border-color: @d4sd-color;
     background-color: @white;
   }
   .d4sdbutton-secondary.d4sdbutton-outline {
     color: @d4sd-secondary-color;
-    border-color:@d4sd-secondary-color;
+    border-color: @d4sd-secondary-color;
     background-color: @white;
   }
   .d4sdbutton-primary:active {
-    background-color:@d4sd-color-active;
-    border-color:@d4sd-color;
+    background-color: @d4sd-color-active;
+    border-color: @d4sd-color;
   }
   .d4sdbutton-secondary:active {
-    background-color:@d4sd-secondary-color-active;
-    border-color:@d4sd-secondary-color;
+    background-color: @d4sd-secondary-color-active;
+    border-color: @d4sd-secondary-color;
+  }
+  .d4sdbutton-primary.d4sdbutton-outline:hover {
+    color: @d4sd-color;
   }
   .d4sdbutton-primary.d4sdbutton-outline:active {
     background-color: @d4sd-color-outline-active;
+  }
+  .d4sdbutton-secondary.d4sdbutton-outline:hover {
+    color: @d4sd-secondary-color;
   }
   .d4sdbutton-secondary.d4sdbutton-outline:active {
     background-color: @d4sd-secondary-color-outline-active;
@@ -59,9 +82,13 @@
   }
   .d4sdbutton-google:hover {
     border-color: @google-color;
+    background-color: @google-color;
+    color: @white;
   }
   .d4sdbutton-google:active {
     background-color: @google-color-active;
+    border-color: @google-color;
+    color: @white;
   }
   .d4sdbutton-facebook {
     background-color: @facebook-color;
@@ -72,9 +99,14 @@
   }
   .d4sdbutton-facebook:hover {
     border-color: @facebook-color;
+    background-color: @facebook-color;
+    border-color: @facebook-color;
+    color: @white;
   }
   .d4sdbutton-facebook:active {
     background-color: @facebook-color-active;
+    border-color: @facebook-color;
+    color: @white;
   }
   .d4sdbutton-small {
     width: 165px;
