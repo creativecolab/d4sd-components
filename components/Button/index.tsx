@@ -7,6 +7,7 @@ import './styles.less';
 export function Button(props: any) {
 
   let pseudoProps = {...props};
+
   if (props.type == 'primary-outline') {
     pseudoProps.className += ' d4sdbutton d4sdbutton-primary d4sdbutton-outline';
   }
