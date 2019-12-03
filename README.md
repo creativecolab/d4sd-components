@@ -14,7 +14,10 @@ Then, running
 ```bash
 npm run storybook
 ```
-Will load the current library and show your components in "stories" on a locally hosted website that will eventually automatically open
+Will load the current library and show your components in "stories" on a locally hosted website that will eventually automatically open.
+
+
+Then run the following to prepare the component library for publishing
 
 ```bash
 npm run build
