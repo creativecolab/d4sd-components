@@ -7,6 +7,7 @@ storiesOf("Input", module).add("Examples", () => (
     <div className="story-module">
       <h3>Input Fields</h3>
       <Input />
+      <Input.TextArea />
     </div>
     <div className="story-module">
     </div>

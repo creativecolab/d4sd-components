@@ -14,6 +14,16 @@ export function Input(props: any) {
     </div>
   )
 }
+Input.TextArea = (props: any) => {
 
+  let pseudoProps = {...props};
+
+  pseudoProps.className += " d4sdinput";
+  return (
+    <div className = "d4sdinput-wrapper">
+      <AntdInput.TextArea {...pseudoProps}>{props.children}</AntdInput.TextArea>
+    </div>
+  )
+}
 Input.Password = AntdInput.Password;
 Input.Group = AntdInput.Group;
