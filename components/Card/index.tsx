@@ -11,3 +11,4 @@ export function Card(props: any) {
       </div>
     )
 }
+Card.Meta = AntdCard.Meta;

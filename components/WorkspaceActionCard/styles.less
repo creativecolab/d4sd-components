@@ -1,0 +1,92 @@
+@import "../../styles/vars.less";
+
+.WorkspaceActionCard {
+  .card-caret {
+    position: absolute;
+    top:calc(24px + 10px);
+    right:24px;
+    path {
+      fill: @d4sd-color;
+    }
+  }
+  .progressBar.warning .ant-progress-bg {
+    background-color: @d4sd-secondary-color;
+  }
+  .progressBar.success .ant-progress-bg {
+    background-color: @d4sd-success;
+  }
+  .card-title {
+    font-size: 26px;
+    font-family: 'Montseratt', 'Open Sans', sans-serif;
+    margin-right: @margin-base * 4;
+  }
+  .card-status {
+
+    text-align: right;
+    .no-submit, .submitted {
+      font-weight: bold;
+      text-align: right;
+      margin-bottom: 0px;
+      color: @d4sd-secondary-color;
+      font-family: 'Open Sans' sans-serif;
+      display: inline;
+      position: relative;
+      right:0px;
+      }
+    .no-submit::before, .submitted::before {
+      content: "";
+      height: 12px;
+      width: 12px;
+      background-color: @d4sd-secondary-color;
+      position: absolute;
+      border-radius: 50%;
+      top: 0px;
+      left: -20px;
+    }
+    .submitted {
+      color: @d4sd-success;
+    }
+    .submitted::before {
+      background-color: @d4sd-success;
+    }
+  }
+  .card-dates {
+    font-weight: bold;
+    color: @b3;
+    .due-date.warning {
+      color: @d4sd-secondary-color;
+    }
+    .due-date.success {
+      color: @d4sd-success
+    }
+    .days-left {
+      float: right;
+    }
+  }
+  .progressBar {
+    transform: rotate(180deg);
+    margin-bottom: @margin-base / 2;
+    margin-top: @margin-base / 2;
+    .ant-progress-bg {
+      height: 16px !important;
+    }
+    .ant-progress-text {
+      display: none;
+    }
+    .ant-progress-outer {
+      padding-right: 0px;
+    }
+  }
+  .btn-wrapper {
+    text-align: center;
+    margin-top: @margin-base;
+  }
+
+  width: 100%;
+}
+.timeline-card.closed {
+  filter: grayscale(1);
+  background-color: @d4sd-color-disabled;
+  box-shadow: none;
+  border: none;
+}
