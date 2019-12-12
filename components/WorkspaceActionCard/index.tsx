@@ -42,7 +42,8 @@ export function WorkspaceActionCard(props: any) {
     </div>}
       className="panelCard"
     >
-    <p>{card.desc}</p>
+    {card.descHTML && <p dangerouslySetInnerHTML={{__html:card.descHTML}}></p>}
+    {card.desc && <p>{card.desc}</p>}
     </Panel>
     </Collapse>
   )
