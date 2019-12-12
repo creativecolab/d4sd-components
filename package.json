@@ -1,6 +1,6 @@
 {
   "name": "@d4sd/components",
-  "version": "2.7.6",
+  "version": "2.7.7",
   "description": "D4SD Component Library, extended from Ant-Design",
   "main": "/lib/index.js",
   "scripts": {
