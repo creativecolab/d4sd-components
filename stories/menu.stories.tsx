@@ -27,7 +27,7 @@ storiesOf("Menu", module).add("Examples", () => (
         </Menu.Item>
       </Menu>
         <div style={{marginTop:'75px'}}>
-        <Header title="Team Turtles!" teamPictures={["defaultProfile.png", "defaultProfile.png"]} handleTeamClick={undefined}/>
+        <Header teamTitle="Team Turtles!" teamPictures={["defaultProfile.png", "defaultProfile.png"]} handleTeamClick={undefined}/>
         <p>Example use of menubar and header for workspace etc.</p>
         <Header title="Welcome!" back="Go back to workspace" handleBackClick={undefined}/>
         <p>Example use of menubar and header for workspace etc. with back button</p>
