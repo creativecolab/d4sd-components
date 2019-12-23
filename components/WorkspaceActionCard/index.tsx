@@ -6,15 +6,17 @@ import './styles.less'
 export function WorkspaceActionCard(props: any) {
   const card = props.card;
   const calcPercentTimeLeft = (dueDate: Date, startDate: Date) => {
-    let currDate = startDate;
+    let currDate = new Date();
     // @ts-ignore
     let timeLeft: number = (dueDate - currDate);
+    // @ts-ignore
+    let totalTime: number = (dueDate - startDate);
 
     let hoursLeft = timeLeft/(1000 * 60 *60);
-    return (hoursLeft / (30 * 24)) * 100
+    return (timeLeft / totalTime) * 100
   }
   const calcDaysLeft = (dueDate: Date, startDate: Date) => {
-    let currDate = startDate;
+    let currDate = new Date();
     // @ts-ignore
     let timeLeft: number = (dueDate - currDate);
 
