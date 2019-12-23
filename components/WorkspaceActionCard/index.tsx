@@ -5,16 +5,16 @@ import './styles.less'
 
 export function WorkspaceActionCard(props: any) {
   const card = props.card;
-  const calcPercentTimeLeft = (dueDate: Date) => {
-    let currDate = new Date();
+  const calcPercentTimeLeft = (dueDate: Date, startDate: Date) => {
+    let currDate = startDate;
     // @ts-ignore
     let timeLeft: number = (dueDate - currDate);
 
     let hoursLeft = timeLeft/(1000 * 60 *60);
     return (hoursLeft / (30 * 24)) * 100
   }
-  const calcDaysLeft = (dueDate: Date) => {
-    let currDate = new Date();
+  const calcDaysLeft = (dueDate: Date, startDate: Date) => {
+    let currDate = startDate;
     // @ts-ignore
     let timeLeft: number = (dueDate - currDate);
 
@@ -28,17 +28,21 @@ export function WorkspaceActionCard(props: any) {
     header={<div className={!card.closed ? "WorkspaceActionCard" : "WorkspaceActionCard closed"}>
     <h2 className="card-title">{card.title}</h2>
     <p className="card-short-desc">{card.shortDesc}</p>
-      { !card.closed && card.dueDate && (card.submitted || !card.submitted) &&
+      { !card.closed && card.dueDate && card.startDate && (card.submitted || !card.submitted) &&
       <div>
         <div className="card-status">{card.submitted ? <span className="submitted">SUBMITTED </span> : <span className="no-submit">NO SUBMISSION</span>}</div>
-        <Progress percent={calcPercentTimeLeft(card.dueDate)} status={card.submitted ? "success" : undefined} className={card.submitted ? "progressBar success" : "progressBar warning"}/>
+        <Progress percent={calcPercentTimeLeft(card.dueDate, card.startDate)} status={card.submitted ? "success" : undefined} className={card.submitted ? "progressBar success" : "progressBar warning"}/>
         <div className="card-dates">DUE:
           <span className={card.submitted ? "due-date success" : "due-date warning"}>{" " + card.dueDate.toLocaleDateString() + " " + card.dueDate.toLocaleTimeString()}</span>
-          <span className="days-left">{calcDaysLeft(card.dueDate)} DAYS LEFT</span>
+          <span className="days-left">{calcDaysLeft(card.dueDate, card.start.date)} DAYS LEFT</span>
         </div>
 
       </div> }
-      {card.buttonTitle && <div className="btn-wrapper"><Button type="primary-outline" size="large" onClick={card.buttonHandleClick}>{card.buttonTitle}</Button></div> }
+      {card.buttonTitle && <div className="btn-wrapper">
+      {card.active === true ? <Button type="primary-outline" size="large" onClick={card.buttonHandleClick}>{card.buttonTitle}</Button> :
+                     <Button type="primary-outline" size="large" disabled onClick={card.buttonHandleClick}>{card.buttonTitle}</Button>
+                   }
+      </div> }
     </div>}
       className="panelCard"
     >
