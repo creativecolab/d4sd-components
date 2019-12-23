@@ -25,8 +25,49 @@
 
   }
   .WorkspaceActionCard {
+    .copy-container {
+      width: 90%;
+      display: flex;
+      margin: auto;
+      .copy-link {
+        display: inline-block;
+        vertical-align: middle;
+        border: 2px solid @b3;
+        border-radius: 10px 0px 0px 10px;
+        border-right-width: 0px;
+        line-height: 50px;
+        font-size: 14px;
+        height: 50px;
+        padding: 0 18px;
+        flex-grow: 1;
+        color: @b1;
+        span {
+          top: -1px;
+          position: relative;
+        }
+      }
+      .d4sdbutton-wrapper {
+        display: inline;
+        // width: auto;
+        max-width: 120px;
+        vertical-align: middle;
+        button {
+          width: 100%;
+          border-radius: 0px 10px 10px 0px;
+        }
+      }
+    }
     width: 100%;
     font-size: 1rem;
+    .share-feedback-wrapper {
+      p {
+        color: @b3;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 12px;
+
+      }
+    }
     .card-short-desc {
       margin: 0px;
       color: @b3;
@@ -39,6 +80,9 @@
     .progressBar.success .ant-progress-bg {
       background-color: @d4sd-success;
     }
+    .progressBar.progress .ant-progress-bg {
+      background-color: @d4sd-color-two;
+    }
     .card-title {
       font-size: 26px;
       font-family: 'Montserrat', 'Open Sans', sans-serif;
@@ -46,9 +90,8 @@
       color: @d4sd-color;
     }
     .card-status {
-
       text-align: right;
-      .no-submit, .submitted {
+      .feedback-text {
         font-weight: bold;
         text-align: right;
         margin-bottom: 0px;
@@ -59,7 +102,41 @@
         right:0px;
         font-size: 14px;
       }
-      .no-submit::before, .submitted::before {
+      .feedback-count {
+        color: white;
+        margin-right: @margin-base / 2;
+        background-color: @d4sd-secondary-color;
+        border-radius: 50%;
+        text-align: center;
+        width: 22px;
+        font-weight: 400;
+        display: inline-block;
+        span {
+          position: relative;
+          top: 1px;
+        }
+      }
+      .feedback-none  {
+        .feedback-text {
+          color: @d4sd-color-two;
+        }
+        .feedback-count {
+          background-color: @d4sd-color-two;
+        }
+      }
+
+      .no-submit, .submitted, .inprogress-submit, .feedback-submit {
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 0px;
+        color: @d4sd-secondary-color;
+        font-family: 'Open Sans' sans-serif;
+        display: inline;
+        position: relative;
+        right:0px;
+        font-size: 14px;
+      }
+      .no-submit::before, .submitted::before, .inprogress-submit::before, .feedback-submit::before {
         content: "";
         height: 12px;
         width: 12px;
@@ -75,6 +152,12 @@
       .submitted::before {
         background-color: @d4sd-success;
       }
+      .inprogress-submit, .feedback-submit {
+        color: @d4sd-color-two;
+      }
+      .inprogress-submit::before, .feedback-submit::before {
+        background-color: @d4sd-color-two;
+      }
     }
     .card-dates {
       font-weight: bold;
@@ -85,6 +168,9 @@
       }
       .due-date.success {
         color: @d4sd-success
+      }
+      .due-date.progress {
+        color: @d4sd-color-two
       }
       .days-left {
         float: right;
