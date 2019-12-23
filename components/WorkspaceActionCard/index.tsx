@@ -34,7 +34,7 @@ export function WorkspaceActionCard(props: any) {
         <Progress percent={calcPercentTimeLeft(card.dueDate, card.startDate)} status={card.submitted ? "success" : undefined} className={card.submitted ? "progressBar success" : "progressBar warning"}/>
         <div className="card-dates">DUE:
           <span className={card.submitted ? "due-date success" : "due-date warning"}>{" " + card.dueDate.toLocaleDateString() + " " + card.dueDate.toLocaleTimeString()}</span>
-          <span className="days-left">{calcDaysLeft(card.dueDate, card.start.date)} DAYS LEFT</span>
+          <span className="days-left">{calcDaysLeft(card.dueDate, card.startDate)} DAYS LEFT</span>
         </div>
 
       </div> }
