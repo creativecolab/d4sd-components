@@ -29,9 +29,9 @@ export function Button(props: any) {
     pseudoProps.className += " d4sdbutton-medium";
   }
   return (
-    <div className="d4sdbutton-wrapper">
-      <AntdButton {...pseudoProps}>{props.children}</AntdButton>
-    </div>
+    <button {...pseudoProps}>
+    <span>{props.children}</span>
+    </button>
   );
 }
 
