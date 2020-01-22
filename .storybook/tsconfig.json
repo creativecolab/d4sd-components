@@ -21,6 +21,5 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
-  },
-  "include": ["custom.d.ts"]
+  }
 }
