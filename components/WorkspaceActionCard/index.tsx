@@ -101,10 +101,10 @@ export function WorkspaceActionCard(props:
               <Progress
                 percent={calcPercentTimeLeft(card.dueDate, card.startDate)}
                 status={card.submitState === "submitted" ? "success" : undefined}
-                className={card.submitState === "submitted" ? "progressBar success" : (card.submitState === "saved" ? "progressBar progress" : "progressBar warning")}
+                className={card.submitState === "submitted" ? "progressBar success" : (card.submitState === "saved" ? "progressBar progressing" : "progressBar warning")}
                 />,
               <div className="card-dates">DUE:
-                <span className={card.submitState === "submitted" ? "due-date success" : (card.submitState === "saved" ? "due-date progress" : "due-date warning")}>{" " + card.dueDate.toLocaleDateString() + " " + card.dueDate.toLocaleTimeString()}</span>
+                <span className={card.submitState === "submitted" ? "due-date success" : (card.submitState === "saved" ? "due-date progressing" : "due-date warning")}>{" " + card.dueDate.toLocaleDateString() + " " + card.dueDate.toLocaleTimeString()}</span>
                 <span className="days-left">{calcDaysLeft(card.dueDate, card.startDate)} DAYS LEFT</span>
               </div>]
               }
