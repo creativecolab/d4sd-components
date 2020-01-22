@@ -3,7 +3,7 @@ import * as React from "react";
 import { WorkspaceActionCard } from "../components/WorkspaceActionCard";
 import {message} from "../";
 const cards = [
-  {title:"Discover a Challenge", desc:"Submit your problem description and solution proposal here", closed:false,shortDesc: "Something here goes here ... ",active:true, buttonHandleClick:() => {
+  {title:"Discover a Challenge", desc:"Submit your problem description and solution proposal here", closed:false,shortDesc: "Something here goes here ... ", descHTML:"FULL TEXT HELLO WORLD, and stuff and what not. FULL TEXT HELLO WORLD, and stuff and what not. FULL TEXT HELLO WORLD, and stuff and what not. FULL TEXT HELLO WORLD, and stuff and what not", active:true, buttonHandleClick:() => {
     message.success("Action clicked");
   }},
   {title:"Register your Team", desc: "Learn about the challenges surrounding San Diego", closed:false,dueDate: new Date("01/25/2020, 11:59:00 PM"),startDate: new Date("12/16/2019, 11:59:00 PM"), submitState:"submitted", buttonTitle:"SEARCH FOR TEAMMATES", active:true, buttonHandleClick:() => {

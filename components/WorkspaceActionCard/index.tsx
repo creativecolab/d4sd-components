@@ -61,24 +61,29 @@ export function WorkspaceActionCard(props:
   };
   const copyRef: React.RefObject<HTMLInputElement> = React.createRef();
   React.useEffect(() => {
-    console.log(copyRef)
     let link = card.feedbacklink ? card.feedbacklink : "";
     setLinkToFeedback(link);
     setCollpased(true);
     setURL();
-  // eslint-disable-next-line
-});
+  }, []);
   return (
     <div className="WorkspaceActionCardWrapper">
         <div className={!card.closed ? "WorkspaceActionCard" : "WorkspaceActionCard closed"}>
           <div className="top" onClick={()=>{
-            setCollpased(!collapsed);
+            console.log(collapsed);
+            if (collapsed === true) {
+              setCollpased(false);
+            }
+            else {
+              setCollpased(true);
+            }
           }}>
             <h2 className="card-title">{card.title}</h2>
-            <div className="arrow">></div>
+            <div className={collapsed ? "arrow" : "arrow collapsed"}>></div>
           </div>
-          {collapsed ? <p className="card-short-desc">{card.shortDesc}</p> : card.descHTML && <p dangerouslySetInnerHTML={{__html:card.descHTML}}></p>}
-            { !card.closed && card.dueDate && card.startDate && (card.submitState || !card.submitState) &&
+          {collapsed && <p className="card-short-desc">{card.shortDesc}</p>}
+          {!collapsed && card.descHTML && <p className="card-full-desc" dangerouslySetInnerHTML={{__html:card.descHTML}}></p>}
+          { !card.closed && card.dueDate && card.startDate && (card.submitState || !card.submitState) &&
             <div>
               <div className="card-status">
               {card.submitState === "submitted" && <span className="submitted">SUBMITTED</span>}
