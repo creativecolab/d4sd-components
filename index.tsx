@@ -7,4 +7,5 @@ export { Input } from "./components/Input";
 export { Menu } from "./components/Menu";
 export { Header } from "./components/Header";
 export { WorkspaceActionCard } from "./components/WorkspaceActionCard";
+export { FeedbackActionCard } from "./components/FeedbackActionCard";
 export * from "antd";
