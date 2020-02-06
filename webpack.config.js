@@ -1,5 +1,7 @@
 var path = require("path");
 const nodeExternals = require("webpack-node-externals");
+const autoprefixer = require('autoprefixer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 module.exports = {
@@ -25,9 +27,23 @@ module.exports = {
         use: "ts-loader"
       },
       {
-        test: /\.(less|css)$/,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "less-loader"]
+        test: /\.less$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: require.resolve('less-loader'),
+            options: {
+              javascriptEnabled: true,
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(jpg|png|svg)$/,
@@ -47,6 +63,11 @@ module.exports = {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".less"]
   },
-  plugins: [new BundleAnalyzerPlugin()],
+  plugins: [
+    new BundleAnalyzerPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    })
+  ],
   externals: [nodeExternals()]
 };
