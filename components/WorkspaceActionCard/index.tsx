@@ -89,7 +89,11 @@ export function WorkspaceActionCard(props: {
           }}
         >
           <h2 className="card-title">{card.title}</h2>
-          <div className={collapsed ? 'arrow' : 'arrow collapsed'}>></div>
+          <div className={collapsed ? 'arrow' : 'arrow collapsed'}>
+            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2.39139L12 12.1953L22 2.39139" stroke="#4497FF" stroke-width="5"/>
+            </svg>
+          </div>
         </div>
         {collapsed && <p className="card-short-desc">{card.shortDesc}</p>}
         {!collapsed && card.descHTML && (
