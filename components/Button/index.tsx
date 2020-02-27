@@ -6,18 +6,22 @@ import "./styles.less";
 /* Default Button is medium sized */
 export function Button(props: any) {
   let pseudoProps = { ...props };
+  pseudoProps.className += " d4sdbutton";
+  if (props.disabled) {
+    pseudoProps.className += " d4sdbutton-disabled";
+  }
   if (props.type == "primary-outline") {
     pseudoProps.className +=
-      " d4sdbutton d4sdbutton-primary d4sdbutton-outline";
+      " d4sdbutton-primary d4sdbutton-outline";
   } else if (props.type == "secondary-outline") {
     pseudoProps.className +=
-      " d4sdbutton d4sdbutton-secondary d4sdbutton-outline";
+      " d4sdbutton-secondary d4sdbutton-outline";
   } else if (props.type == "primary") {
-    pseudoProps.className += " d4sdbutton d4sdbutton-primary";
+    pseudoProps.className += " d4sdbutton-primary";
   } else if (props.type == "secondary") {
-    pseudoProps.className += " d4sdbutton d4sdbutton-secondary";
+    pseudoProps.className += " d4sdbutton-secondary";
   } else {
-    pseudoProps.className += " d4sdbutton d4sdbutton-primary";
+    pseudoProps.className += " d4sdbutton-primary";
   }
   if (props.size == "medium") {
     pseudoProps.className += " d4sdbutton-medium";
@@ -28,9 +32,10 @@ export function Button(props: any) {
   } else {
     pseudoProps.className += " d4sdbutton-medium";
   }
+
   return (
     <button {...pseudoProps}>
-    <span>{props.children}</span>
+      <span>{props.children}</span>
     </button>
   );
 }

@@ -26,6 +26,12 @@ storiesOf("Button", module).add("All", () => (
       <Button type="secondary" size="small">
         VERY STRETCHED OUT BUTTON
       </Button>
+      <Button type="primary" disabled size="small">
+        disabled :()
+      </Button>
+      <Button type="primary-outline" disabled size="small">
+        disabled outline
+      </Button>
     </div>
     <div className="story-module spaced">
       <h3>Medium Buttons (sizable)</h3>
