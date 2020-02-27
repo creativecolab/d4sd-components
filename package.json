@@ -6,8 +6,7 @@
   "scripts": {
     "storybook": "start-storybook -s ./stories/assets -p 9001",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -f -r ./lib && webpack --display-error-details",
-    "prepublish": "npm run build"
+    "build": "rm -f -r ./lib && webpack --display-error-details"
   },
   "author": "",
   "license": "MIT",
