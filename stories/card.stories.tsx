@@ -3,7 +3,7 @@ import * as React from "react";
 import { Card } from "../components/Card";
 const {Meta} = Card;
 storiesOf("Card", module).add("Examples", () => (
-  <div>
+  <div style={{width: "100px;"}}>
     <Card>
       <Meta
         title="Join the discussion"
